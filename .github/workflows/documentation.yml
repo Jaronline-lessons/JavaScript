@@ -6,6 +6,8 @@ on:
     branches:
       - main
 
+permissions: read-all|write-all
+
 jobs:
   build:
     name: Check materials and publish if tagged
