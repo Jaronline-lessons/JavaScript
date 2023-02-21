@@ -10,16 +10,10 @@ permissions:
   actions: write
   checks: write
   contents: write
-  deployments: write
-  id-token: none
-  issues: none
-  discussions: none
-  packages: write
+  deployments: none
+  packages: none
   pages: write
-  pull-requests: none
-  repository-projects: none
-  security-events: none
-  statuses: write
+  statuses: none
 
 jobs:
   build:
