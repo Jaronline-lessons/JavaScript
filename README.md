@@ -1,2 +1,2 @@
-# JavaScript-v2
+# JavaScript
 JavaScript lessons created by Jaronline 
