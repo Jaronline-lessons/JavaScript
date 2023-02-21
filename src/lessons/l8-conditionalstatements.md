@@ -1,1 +1,0 @@
-# Lesson 8 - Conditional Statements (L8)

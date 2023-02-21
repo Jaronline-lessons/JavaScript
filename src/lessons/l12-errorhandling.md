@@ -1,1 +1,0 @@
-# Lesson 12 - Error Handling (L12)
