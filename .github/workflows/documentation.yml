@@ -8,12 +8,9 @@ on:
 
 permissions:
   actions: write
-  checks: write
+  checks: none
   contents: write
-  deployments: none
-  packages: none
-  pages: write
-  statuses: none
+  pages: none
 
 jobs:
   build:
