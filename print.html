@@ -531,8 +531,132 @@ When you are done, check your results with the ones you wrote down on paper. Are
 <p>Now, write a JavaScript program that will log the result of the following expressions to the console.
 When you are done, check your results with the ones you wrote down on paper. Are they the same?</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-4---variables-l4"><a class="header" href="#lesson-4---variables-l4">Lesson 4 - Variables (L4)</a></h1>
-<p>In this lesson you will learn about variables, which are used to store data.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-4---variables-l4-1"><a class="header" href="#lesson-4---variables-l4-1">Lesson 4 - Variables (L4)</a></h1>
+<p>In this lesson you will learn about variables, which are used to store data.
+We will also cover assignment operators, which are used to assign values to variables.
+Lastly, we will cover the increment and decrement operators and the delete keyword.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-4---variables-l4-1"><a class="header" href="#lesson-4---variables-l4-1">Lesson 4 - Variables (L4)</a></h1>
+<h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>Variables are a way to store data in a program.
+They are used to store data that can be used multiple times, such as a user's name and can be changed, such as a score.</p>
+<h1 id="declaring-variables"><a class="header" href="#declaring-variables">Declaring Variables</a></h1>
+<p>Variables in JavaScript are declared using the <code>var</code> keyword (we will learn about other ways to declare variables later).
+Next, we give the variable a name, which is used to refer to the variable later.
+Finally, we can optionally assign a value to the variable.</p>
+<pre><code class="language-js">var myVariable;
+</code></pre>
+<p>This declares a variable named <code>myVariable</code> with no value.</p>
+<pre><code class="language-js">var myVariable = 5;
+</code></pre>
+<p>This declares a variable named <code>myVariable</code> and initializes it with the value <code>5</code>.</p>
+<h1 id="increment-and-decrement-operators"><a class="header" href="#increment-and-decrement-operators">Increment and Decrement Operators</a></h1>
+<p>There are two operators that can be used to increment and decrement a variable.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Example</th><th>Same As</th></tr></thead><tbody>
+<tr><td><code>++</code></td><td><code>myVariable++</code></td><td><code>myVariable = myVariable + 1</code></td></tr>
+<tr><td><code>--</code></td><td><code>myVariable--</code></td><td><code>myVariable = myVariable - 1</code></td></tr>
+</tbody></table>
+</div>
+<p>Variables can be incremented and decremented using the <code>++</code> and <code>--</code> operators.
+These operators can be used before or after the variable.</p>
+<h2 id="increment"><a class="header" href="#increment">Increment</a></h2>
+<pre><code class="language-js">var myVariable = 5;
+console.log(myVariable++); // myVariable becomes 6, logs 5 (value before increment)
+console.log(myVariable); // logs 6 (value after increment)
+</code></pre>
+<pre><code class="language-js">var myVariable = 5;
+console.log(++myVariable); // myVariable becomes 6, logs 6 (value after increment)
+console.log(myVariable); // logs 6 (value after increment)
+</code></pre>
+<p>Both of these examples increment the value of <code>myVariable</code> by 1.
+The first example increments the value of <code>myVariable</code> after it is used, the second example increments the value of <code>myVariable</code> before it is used.</p>
+<h2 id="decrement"><a class="header" href="#decrement">Decrement</a></h2>
+<pre><code class="language-js">var myVariable = 5;
+console.log(myVariable--); // myVariable becomes 4, logs 5 (value before decrement)
+console.log(myVariable); // logs 4 (value after decrement)
+</code></pre>
+<pre><code class="language-js">var myVariable = 5;
+console.log(--myVariable); // myVariable becomes 4, logs 4 (value after decrement)
+console.log(myVariable); // logs 4 (value after decrement)
+</code></pre>
+<p>Both of these examples decrement the value of <code>myVariable</code> by 1.
+The first example decrements the value of <code>myVariable</code> after it is used, the second example decrements the value of <code>myVariable</code> before it is used.</p>
+<h1 id="assignment-operators"><a class="header" href="#assignment-operators">Assignment Operators</a></h1>
+<p>There are several assignment operators that can be used to change the value of a variable.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Example</th><th>Same As</th></tr></thead><tbody>
+<tr><td><code>=</code></td><td><code>myVariable = 5</code></td><td><code>myVariable = 5</code></td></tr>
+<tr><td><code>+=</code></td><td><code>myVariable += 5</code></td><td><code>myVariable = myVariable + 5</code></td></tr>
+<tr><td><code>-=</code></td><td><code>myVariable -= 5</code></td><td><code>myVariable = myVariable - 5</code></td></tr>
+<tr><td><code>*=</code></td><td><code>myVariable *= 5</code></td><td><code>myVariable = myVariable * 5</code></td></tr>
+<tr><td><code>/=</code></td><td><code>myVariable /= 5</code></td><td><code>myVariable = myVariable / 5</code></td></tr>
+<tr><td><code>%=</code></td><td><code>myVariable %= 5</code></td><td><code>myVariable = myVariable % 5</code></td></tr>
+<tr><td><code>**=</code></td><td><code>myVariable **= 5</code></td><td><code>myVariable = myVariable ** 5</code></td></tr>
+</tbody></table>
+</div>
+<p>Variables can be changed by assigning a new value to them.
+This is done using the <code>=</code> operator.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable = 10;
+</code></pre>
+<p>This declares a variable called <code>myVariable</code>, then initializes it to 5, lastly we change the value of <code>myVariable</code> from <code>5</code> to <code>10</code>.
+This can be done as many times as you want and with any value.</p>
+<p>We can also use arithmetic operators to change the value of a variable.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable = myVariable + 5;
+</code></pre>
+<p>This can be shortened using the <code>+=</code> operator.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable += 5;
+</code></pre>
+<p>This is the same as the previous example, but shorter.
+This can be done with all the arithmetic operators, except for the increment and decrement operators.
+Some more examples can be seen in the code below.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable += 5; // myVariable = myVariable + 5 = 10
+myVariable -= 5; // myVariable = myVariable - 5 = 5
+myVariable *= 5; // myVariable = myVariable * 5 = 25
+myVariable /= 5; // myVariable = myVariable / 5 = 5
+myVariable **= 5; // myVariable = myVariable ** 5 = 3125
+myVariable %= 5; // myVariable = myVariable % 5 = 0
+</code></pre>
+<h1 id="deleting-variables"><a class="header" href="#deleting-variables">Deleting Variables</a></h1>
+<p>Variables can be deleted using the <code>delete</code> keyword.</p>
+<pre><code class="language-js">var myVariable = 5;
+delete myVariable;
+</code></pre>
+<p>This deletes the variable <code>myVariable</code>.
+This is rarely used, but can be useful in some cases.
+If you try to use a deleted variable, it will return <code>undefined</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-4---variables-l4-2"><a class="header" href="#lesson-4---variables-l4-2">Lesson 4 - Variables (L4)</a></h1>
+<p>To set up the environment for the tasks, you will need to create a folder called variables and create a file called index.js.
+You can use the same index.html file from the first lesson.</p>
+<h1 id="task-l41---declaring-variables-and-assigning-values"><a class="header" href="#task-l41---declaring-variables-and-assigning-values">Task L4.1 - Declaring variables and assigning values</a></h1>
+<p>In this task you will learn how to declare variables and assign values to them.</p>
+<p>Create a variable called myName and assign your name to it.
+Next, create a variable called myAge and assign your age to it.
+Finally, create a variable called myHobby and assign your hobby to it.
+Log the values of the variables to the console, the result should look like this (replace the values with your own):</p>
+<p><code>&quot;My name is NAME, I am AGE years old and my hobby is HOBBY.&quot;</code></p>
+<h1 id="task-l42---incrementing-and-decrementing-variables"><a class="header" href="#task-l42---incrementing-and-decrementing-variables">Task L4.2 - Incrementing and decrementing variables</a></h1>
+<p>In this task you will learn how to increment and decrement variables.</p>
+<p>Create a variable called myAge and assign your age to it.
+Next, create a variable called myNextAge and a variable called myPreviousAge and assign the value of myAge to them.
+Finally, increment myNextAge by 1 and decrement myPreviousAge by 1.
+Log the values of the variables to the console, the result should look like this (replace the values with your own):</p>
+<p><code>&quot;My age is AGE, next year I will be NEXT_AGE and last year I was PREVIOUS_AGE.&quot;</code></p>
+<h1 id="task-l43---assignment-operators"><a class="header" href="#task-l43---assignment-operators">Task L4.3 - Assignment Operators</a></h1>
+<p>In this task you will learn how to use assignment operators.</p>
+<p>Create a variable called myAge and assign your age to it.
+Next, create a variable called myNextAge and a variable called myPreviousAge and assign the value of myAge to them.
+Finally, increment myNextAge by 2 using the <code>+=</code> operator and decrement myPreviousAge by 2 using the <code>-=</code> operator.
+Log the values of the variables to the console, the result should look like this (replace the values with your own):</p>
+<p><code>&quot;My age is AGE, in two years I will be NEXT_AGE and two years ago I was PREVIOUS_AGE.&quot;</code></p>
+<h1 id="task-l44---deleting-variables"><a class="header" href="#task-l44---deleting-variables">Task L4.4 - Deleting variables</a></h1>
+<p>In this task you will learn how to delete variables.</p>
+<p>Create a variable called myName and assign your name to it.
+Next, create a variable called myAge and assign your age to it.
+Finally, delete the myName variable.
+Log the values of the variables to the console, the result should look like this (replace the values with your own):</p>
+<p><code>&quot;My name is NAME, I am AGE years old.&quot;</code></p>
+<p>The myName variable should be undefined and the myAge variable should contain your age.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-5---var-let-and-const-l5"><a class="header" href="#lesson-5---var-let-and-const-l5">Lesson 5 - Var, Let and Const (L5)</a></h1>
 <p>In this lesson you will learn about the different ways to declare variables in JavaScript and the differences between them.</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-5---var-let-and-const-l5-1"><a class="header" href="#lesson-5---var-let-and-const-l5-1">Lesson 5 - Var, Let and Const (L5)</a></h1>

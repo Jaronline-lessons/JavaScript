@@ -142,7 +142,98 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="lesson-4---variables-l4"><a class="header" href="#lesson-4---variables-l4">Lesson 4 - Variables (L4)</a></h1>
+<h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<p>Variables are a way to store data in a program.
+They are used to store data that can be used multiple times, such as a user's name and can be changed, such as a score.</p>
+<h1 id="declaring-variables"><a class="header" href="#declaring-variables">Declaring Variables</a></h1>
+<p>Variables in JavaScript are declared using the <code>var</code> keyword (we will learn about other ways to declare variables later).
+Next, we give the variable a name, which is used to refer to the variable later.
+Finally, we can optionally assign a value to the variable.</p>
+<pre><code class="language-js">var myVariable;
+</code></pre>
+<p>This declares a variable named <code>myVariable</code> with no value.</p>
+<pre><code class="language-js">var myVariable = 5;
+</code></pre>
+<p>This declares a variable named <code>myVariable</code> and initializes it with the value <code>5</code>.</p>
+<h1 id="increment-and-decrement-operators"><a class="header" href="#increment-and-decrement-operators">Increment and Decrement Operators</a></h1>
+<p>There are two operators that can be used to increment and decrement a variable.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Example</th><th>Same As</th></tr></thead><tbody>
+<tr><td><code>++</code></td><td><code>myVariable++</code></td><td><code>myVariable = myVariable + 1</code></td></tr>
+<tr><td><code>--</code></td><td><code>myVariable--</code></td><td><code>myVariable = myVariable - 1</code></td></tr>
+</tbody></table>
+</div>
+<p>Variables can be incremented and decremented using the <code>++</code> and <code>--</code> operators.
+These operators can be used before or after the variable.</p>
+<h2 id="increment"><a class="header" href="#increment">Increment</a></h2>
+<pre><code class="language-js">var myVariable = 5;
+console.log(myVariable++); // myVariable becomes 6, logs 5 (value before increment)
+console.log(myVariable); // logs 6 (value after increment)
+</code></pre>
+<pre><code class="language-js">var myVariable = 5;
+console.log(++myVariable); // myVariable becomes 6, logs 6 (value after increment)
+console.log(myVariable); // logs 6 (value after increment)
+</code></pre>
+<p>Both of these examples increment the value of <code>myVariable</code> by 1.
+The first example increments the value of <code>myVariable</code> after it is used, the second example increments the value of <code>myVariable</code> before it is used.</p>
+<h2 id="decrement"><a class="header" href="#decrement">Decrement</a></h2>
+<pre><code class="language-js">var myVariable = 5;
+console.log(myVariable--); // myVariable becomes 4, logs 5 (value before decrement)
+console.log(myVariable); // logs 4 (value after decrement)
+</code></pre>
+<pre><code class="language-js">var myVariable = 5;
+console.log(--myVariable); // myVariable becomes 4, logs 4 (value after decrement)
+console.log(myVariable); // logs 4 (value after decrement)
+</code></pre>
+<p>Both of these examples decrement the value of <code>myVariable</code> by 1.
+The first example decrements the value of <code>myVariable</code> after it is used, the second example decrements the value of <code>myVariable</code> before it is used.</p>
+<h1 id="assignment-operators"><a class="header" href="#assignment-operators">Assignment Operators</a></h1>
+<p>There are several assignment operators that can be used to change the value of a variable.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Example</th><th>Same As</th></tr></thead><tbody>
+<tr><td><code>=</code></td><td><code>myVariable = 5</code></td><td><code>myVariable = 5</code></td></tr>
+<tr><td><code>+=</code></td><td><code>myVariable += 5</code></td><td><code>myVariable = myVariable + 5</code></td></tr>
+<tr><td><code>-=</code></td><td><code>myVariable -= 5</code></td><td><code>myVariable = myVariable - 5</code></td></tr>
+<tr><td><code>*=</code></td><td><code>myVariable *= 5</code></td><td><code>myVariable = myVariable * 5</code></td></tr>
+<tr><td><code>/=</code></td><td><code>myVariable /= 5</code></td><td><code>myVariable = myVariable / 5</code></td></tr>
+<tr><td><code>%=</code></td><td><code>myVariable %= 5</code></td><td><code>myVariable = myVariable % 5</code></td></tr>
+<tr><td><code>**=</code></td><td><code>myVariable **= 5</code></td><td><code>myVariable = myVariable ** 5</code></td></tr>
+</tbody></table>
+</div>
+<p>Variables can be changed by assigning a new value to them.
+This is done using the <code>=</code> operator.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable = 10;
+</code></pre>
+<p>This declares a variable called <code>myVariable</code>, then initializes it to 5, lastly we change the value of <code>myVariable</code> from <code>5</code> to <code>10</code>.
+This can be done as many times as you want and with any value.</p>
+<p>We can also use arithmetic operators to change the value of a variable.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable = myVariable + 5;
+</code></pre>
+<p>This can be shortened using the <code>+=</code> operator.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable += 5;
+</code></pre>
+<p>This is the same as the previous example, but shorter.
+This can be done with all the arithmetic operators, except for the increment and decrement operators.
+Some more examples can be seen in the code below.</p>
+<pre><code class="language-js">var myVariable = 5;
+myVariable += 5; // myVariable = myVariable + 5 = 10
+myVariable -= 5; // myVariable = myVariable - 5 = 5
+myVariable *= 5; // myVariable = myVariable * 5 = 25
+myVariable /= 5; // myVariable = myVariable / 5 = 5
+myVariable **= 5; // myVariable = myVariable ** 5 = 3125
+myVariable %= 5; // myVariable = myVariable % 5 = 0
+</code></pre>
+<h1 id="deleting-variables"><a class="header" href="#deleting-variables">Deleting Variables</a></h1>
+<p>Variables can be deleted using the <code>delete</code> keyword.</p>
+<pre><code class="language-js">var myVariable = 5;
+delete myVariable;
+</code></pre>
+<p>This deletes the variable <code>myVariable</code>.
+This is rarely used, but can be useful in some cases.
+If you try to use a deleted variable, it will return <code>undefined</code>.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
