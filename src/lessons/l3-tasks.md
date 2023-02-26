@@ -1,4 +1,4 @@
-# Lesson 3 - Logical Operators (L3)
+# Lesson 3 - Operators (L3)
 
 
 To set up the environment for the tasks, you will need to create a folder called operators and create a file called index.js.
