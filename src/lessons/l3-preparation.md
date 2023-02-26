@@ -93,7 +93,7 @@ There are 9 comparison operators in JavaScript.
 - The greater than or equal to operator (&gt;=) returns true if the left operand is greater than or equal to the right operand.
 - The less than or equal to operator (&lt;=) returns true if the left operand is less than or equal to the right operand.
 
-We will cover the ternary operator in the next lesson.
+We will cover the ternary operator in the eighth lesson.
 
 # Logical Operators
 
