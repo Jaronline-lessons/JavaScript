@@ -52,4 +52,4 @@
 
 # Projects
 
-- [JavaScript Project](./projects/p1-javascript.md)
+- [Calculator](./projects/p1-calculator.md)
