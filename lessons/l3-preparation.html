@@ -142,7 +142,133 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="lesson-3---operators-l3"><a class="header" href="#lesson-3---operators-l3">Lesson 3 - Operators (L3)</a></h1>
+<h1 id="arithmetic-operators"><a class="header" href="#arithmetic-operators">Arithmetic Operators</a></h1>
+<p>There are 8 arithmetic operators in JavaScript.
+These operators are used to perform arithmetic on numbers (literals or variables).
+The following table lists the arithmetic operators in JavaScript.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody>
+<tr><td>+</td><td>Addition</td></tr>
+<tr><td>-</td><td>Subtraction</td></tr>
+<tr><td>*</td><td>Multiplication</td></tr>
+<tr><td>**</td><td>Exponentiation</td></tr>
+<tr><td>/</td><td>Division</td></tr>
+<tr><td>%</td><td>Modulus</td></tr>
+<tr><td>++</td><td>Increment</td></tr>
+<tr><td>--</td><td>Decrement</td></tr>
+</tbody></table>
+</div>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<pre><code class="language-js">5 + 5 // 10
+5 - 5 // 0
+5 * 5 // 25
+5 ** 5 // 3125 (5 * 5 * 5 * 5 * 5)
+5 / 5 // 1
+5 % 5 // 0 (5 / 5 = 1 remainder 0)
+</code></pre>
+<ul>
+<li>The exponentiation operator returns the result of raising the first operand to the power of the second operand.</li>
+<li>The modulus operator returns the remainder of a division operation.</li>
+</ul>
+<h3 id="string-concatenation"><a class="header" href="#string-concatenation">String Concatenation</a></h3>
+<p>The addition operator can also be used to concatenate strings and numbers.</p>
+<pre><code class="language-js">&quot;Hello&quot; + &quot; &quot; + &quot;World&quot; // &quot;Hello World&quot;
+&quot;Hello&quot; + &quot; &quot; + 42 // &quot;Hello 42&quot;
+</code></pre>
+<p>We will cover the increment and decrement operators in the next lesson.</p>
+<h1 id="comparison-operators"><a class="header" href="#comparison-operators">Comparison Operators</a></h1>
+<p>There are 9 comparison operators in JavaScript.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody>
+<tr><td>==</td><td>Equal to</td></tr>
+<tr><td>===</td><td>Equal value and equal type</td></tr>
+<tr><td>!=</td><td>Not equal</td></tr>
+<tr><td>!==</td><td>Not equal value or not equal type</td></tr>
+<tr><td>&gt;</td><td>Greater than</td></tr>
+<tr><td>&lt;</td><td>Less than</td></tr>
+<tr><td>&gt;=</td><td>Greater than or equal to</td></tr>
+<tr><td>&lt;=</td><td>Less than or equal to</td></tr>
+<tr><td>?</td><td>Ternary operator</td></tr>
+</tbody></table>
+</div>
+<h2 id="examples-1"><a class="header" href="#examples-1">Examples</a></h2>
+<pre><code class="language-js">5 == 5 // true
+5 == &quot;5&quot; // true
+
+5 === 5 // true (5 is equal to 5)
+5 === &quot;5&quot; // false (5 is not equal to &quot;5&quot;)
+
+5 != 5 // false
+5 != &quot;5&quot; // false
+
+5 !== 5 // false (5 is equal to 5)
+5 !== &quot;5&quot; // true (5 is not equal to &quot;5&quot;)
+
+5 &gt; 5 // false
+5 &gt; 10 // false
+10 &gt; 5 // true
+
+5 &lt; 5 // false
+5 &lt; 10 // true
+10 &lt; 5 // false
+
+5 &gt;= 5 // true (5 is equal to 5)
+5 &gt;= 10 // false (5 is not greater than or equal to 10)
+10 &gt;= 5 // true (10 is greater than 5)
+</code></pre>
+<ul>
+<li>The equality operators (== and ===) return true if the operands are equal.</li>
+<li>The inequality operators (!= and !==) return true if the operands are not equal.</li>
+<li>The greater than operator (&gt;) returns true if the left operand is greater than the right operand.</li>
+<li>The less than operator (&lt;) returns true if the left operand is less than the right operand.</li>
+<li>The greater than or equal to operator (&gt;=) returns true if the left operand is greater than or equal to the right operand.</li>
+<li>The less than or equal to operator (&lt;=) returns true if the left operand is less than or equal to the right operand.</li>
+</ul>
+<p>We will cover the ternary operator in the next lesson.</p>
+<h1 id="logical-operators"><a class="header" href="#logical-operators">Logical Operators</a></h1>
+<p>There are 3 logical operators in JavaScript.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody>
+<tr><td>&amp;&amp;</td><td>And</td></tr>
+<tr><td>||</td><td>Or</td></tr>
+<tr><td>!</td><td>Not</td></tr>
+</tbody></table>
+</div>
+<h2 id="examples-2"><a class="header" href="#examples-2">Examples</a></h2>
+<pre><code class="language-js">true &amp;&amp; true // true
+true &amp;&amp; false // false
+false &amp;&amp; true // false
+false &amp;&amp; false // false
+
+true || true // true
+true || false // true
+false || true // true
+false || false // false
+
+!true // false
+!false // true
+</code></pre>
+<ul>
+<li>The logical and operator (&amp;&amp;) returns true if both operands are true.</li>
+<li>The logical or operator (||) returns true if one of the operands is true.</li>
+<li>The logical not operator (!) returns the opposite of its operand.</li>
+</ul>
+<h1 id="type-operators"><a class="header" href="#type-operators">Type Operators</a></h1>
+<p>There are 2 type operators in JavaScript.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Description</th></tr></thead><tbody>
+<tr><td>typeof</td><td>Returns the type of a variable</td></tr>
+<tr><td>instanceof</td><td>Returns true if an object is an instance of an object type</td></tr>
+</tbody></table>
+</div>
+<p>The instanceof operator is used to check the type of object.
+This operator is covered in another course, you do not need to worry about it for now.
+We have already covered the typeof operator in the previous lesson, but we will show it one more time in the code-block below.</p>
+<h2 id="examples-3"><a class="header" href="#examples-3">Examples</a></h2>
+<pre><code class="language-js">typeof 5 // &quot;number&quot;
+typeof &quot;5&quot; // &quot;string&quot;
+typeof true // &quot;boolean&quot;
+typeof undefined // &quot;undefined&quot;
+typeof null // &quot;object&quot;
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
