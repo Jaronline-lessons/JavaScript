@@ -786,7 +786,180 @@ const myAge = 25;
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-6---dates-l6"><a class="header" href="#lesson-6---dates-l6">Lesson 6 - Dates (L6)</a></h1>
 <p>In this lesson you will learn how to work with dates in JavaScript.
 You will learn how to create a date object, how to get the current date and time, how to get the year, month, day, hour, minute, second, and millisecond from a date object, and how to format a date object.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-6---dates-l6-1"><a class="header" href="#lesson-6---dates-l6-1">Lesson 6 - Dates (L6)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-6---dates-l6-1"><a class="header" href="#lesson-6---dates-l6-1">Lesson 6 - Dates (L6)</a></h1>
+<p>Dates and times are important in many applications.
+In this lesson, we will learn how to work with dates and times in JavaScript.</p>
+<h1 id="creating-dates"><a class="header" href="#creating-dates">Creating Dates</a></h1>
+<p>The <code>Date</code> object is used to work with dates and times.
+It is a built-in object in JavaScript.
+For example, we can create a new date object with the current date and time:</p>
+<pre><code class="language-js">const now = new Date();
+</code></pre>
+<p>To create dates with a specific date and time, we can pass a string to the <code>Date</code> constructor.
+The string should be in a specific format.
+For example, to create a date object representing January 1, 2020 at 12:00 AM, we can do:</p>
+<pre><code class="language-js">const date = new Date('2020-01-01T00:00:00');
+</code></pre>
+<p>The format of the string is <code>YYYY-MM-DDTHH:mm:ss</code>.</p>
+<ul>
+<li>The <code>YYYY</code> part represents the year.</li>
+<li>The <code>MM</code> part represents the month.</li>
+<li>The <code>DD</code> part represents the day.</li>
+<li>The <code>T</code> character is used to separate the date and time parts.</li>
+<li>The <code>HH</code> part represents the hour in a 24-hour format.</li>
+<li>The <code>mm</code> part represents the minutes.</li>
+<li>The <code>ss</code> part represents the seconds.</li>
+</ul>
+<h1 id="displaying-dates"><a class="header" href="#displaying-dates">Displaying Dates</a></h1>
+<p>There are many ways to display dates in JavaScript.
+For example, we can use the <code>toString</code> method to display the date as a string:</p>
+<pre><code class="language-js">console.log(date.toString());
+</code></pre>
+<p>To display dates in a more human-readable format, we can use the <code>toLocaleString</code> method.
+For example, to display the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.toLocaleString());
+</code></pre>
+<h2 id="displaying-just-the-date"><a class="header" href="#displaying-just-the-date">Displaying just the date</a></h2>
+<p>To display just the date, we can use the <code>toDateString</code> method.
+For example, to display the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.toDateString());
+</code></pre>
+<p>This can also be done using the <code>toLocaleDateString</code> method to display the date in a more human-readable format.
+For example, to display the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.toLocaleDateString());
+</code></pre>
+<h2 id="displaying-just-the-time"><a class="header" href="#displaying-just-the-time">Displaying just the time</a></h2>
+<p>To display just the time, we can use the <code>toTimeString</code> method.
+For example, to display the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.toTimeString());
+</code></pre>
+<p>This can also be done using the <code>toLocaleTimeString</code> method to display the time in a more human-readable format.
+For example, to display the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.toLocaleTimeString());
+</code></pre>
+<h2 id="other-date-formats"><a class="header" href="#other-date-formats">Other date formats</a></h2>
+<p>There are 2 other methods that can be used to display dates in JavaScript.
+The <code>toUTCString</code> method displays the date in the UTC format.
+The <code>toISOString</code> method displays the date in the ISO format.</p>
+<p>If you are not familiar with these formats, you can read more about them by following the links below:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString">toUTCString</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString">toISOString</a></li>
+</ul>
+<h1 id="getting-date-components"><a class="header" href="#getting-date-components">Getting Date Components</a></h1>
+<p>We can get the year, month, day, hour, minute, second, and millisecond of a date using the <code>getFullYear</code>, <code>getMonth</code>, <code>getDate</code>, <code>getHours</code>, <code>getMinutes</code>, <code>getSeconds</code>, and <code>getMilliseconds</code> methods.</p>
+<h2 id="getfullyear"><a class="header" href="#getfullyear">getFullYear</a></h2>
+<p>To get the year of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getFullYear()); // 2020
+</code></pre>
+<h2 id="getmonth"><a class="header" href="#getmonth">getMonth</a></h2>
+<p>The <code>getMonth</code> method returns the month as a number between 0 and 11.
+To get the month as a number between 1 and 12, we can add 1 to the result of the <code>getMonth</code> method.
+For example, to get the month of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">// The month is 0 because the months are 0-indexed
+// (0 = January, 1 = February, etc.)
+console.log(date.getMonth()); // 0
+</code></pre>
+<h2 id="getdate"><a class="header" href="#getdate">getDate</a></h2>
+<p>To get the day of the month of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getDate()); // 1
+</code></pre>
+<h2 id="gethours"><a class="header" href="#gethours">getHours</a></h2>
+<p>To get the hour of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getHours()); // 0
+</code></pre>
+<h2 id="getminutes"><a class="header" href="#getminutes">getMinutes</a></h2>
+<p>To get the minutes of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getMinutes()); // 0
+</code></pre>
+<h2 id="getseconds"><a class="header" href="#getseconds">getSeconds</a></h2>
+<p>To get the seconds of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getSeconds()); // 0
+</code></pre>
+<h2 id="getmilliseconds"><a class="header" href="#getmilliseconds">getMilliseconds</a></h2>
+<p>To get the milliseconds of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getMilliseconds()); // 0
+</code></pre>
+<h2 id="getting-the-day-of-the-week"><a class="header" href="#getting-the-day-of-the-week">Getting the Day of the Week</a></h2>
+<p>We can get the day of the week of a date using the <code>getDay</code> method.
+The <code>getDay</code> method returns a number between 0 and 6, where 0 represents Sunday, 1 represents Monday, and so on.</p>
+<p>For example, to get the day of the week of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">console.log(date.getDay()); // 3 (Wednesday)
+</code></pre>
+<h1 id="setting-date-components"><a class="header" href="#setting-date-components">Setting Date Components</a></h1>
+<p>We can set the year, month, day, hour, minute, second, and millisecond of a date using the <code>setFullYear</code>, <code>setMonth</code>, <code>setDate</code>, <code>setHours</code>, <code>setMinutes</code>, <code>setSeconds</code>, and <code>setMilliseconds</code> methods.</p>
+<h2 id="setfullyear"><a class="header" href="#setfullyear">setFullYear</a></h2>
+<p>To set the year of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setFullYear(2021);
+console.log(date.getFullYear()); // 2021
+</code></pre>
+<h2 id="setmonth"><a class="header" href="#setmonth">setMonth</a></h2>
+<p>The <code>setMonth</code> method expects the month as a number between 0 and 11.
+To set the month as a number between 1 and 12, we can subtract 1 from the month number.
+For example, to set the month of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setMonth(1);
+console.log(date.getMonth()); // 1 (February)
+</code></pre>
+<h2 id="setdate"><a class="header" href="#setdate">setDate</a></h2>
+<p>To set the day of the month of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setDate(2);
+console.log(date.getDate()); // 2
+</code></pre>
+<h2 id="sethours"><a class="header" href="#sethours">setHours</a></h2>
+<p>To set the hour of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setHours(1);
+console.log(date.getHours()); // 1
+</code></pre>
+<h2 id="setminutes"><a class="header" href="#setminutes">setMinutes</a></h2>
+<p>To set the minutes of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setMinutes(1);
+console.log(date.getMinutes()); // 1
+</code></pre>
+<h2 id="setseconds"><a class="header" href="#setseconds">setSeconds</a></h2>
+<p>To set the seconds of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setSeconds(1);
+console.log(date.getSeconds()); // 1
+</code></pre>
+<h2 id="setmilliseconds"><a class="header" href="#setmilliseconds">setMilliseconds</a></h2>
+<p>To set the milliseconds of the date we created in the previous section, we can do:</p>
+<pre><code class="language-js">date.setMilliseconds(1);
+console.log(date.getMilliseconds()); // 1
+</code></pre>
+<h1 id="comparing-dates"><a class="header" href="#comparing-dates">Comparing Dates</a></h1>
+<p>To compare dates, we can use the comparison operators.
+For example, to compare the date we created in the previous section to the current date, we can do:</p>
+<pre><code class="language-js">console.log(date &gt; new Date()); // false
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-6---dates-l6-2"><a class="header" href="#lesson-6---dates-l6-2">Lesson 6 - Dates (L6)</a></h1>
+<p>To set up the environment for the tasks, you will need to create a folder called dates and create a file called index.js.
+You can use the same index.html file from the first lesson.</p>
+<h1 id="task-l61---displaying-dates"><a class="header" href="#task-l61---displaying-dates">Task L6.1 - Displaying Dates</a></h1>
+<p>In this task, you will create a date object and display it in different formats.
+First, create a date object representing <code>March 5, 2023 at 3:35 PM</code>.
+Then, log the date object to the console using the different methods we learned in the lesson (Displaying Dates).
+You do not need to log the date object to the console using the <code>toUTCString</code> and <code>toISOString</code> methods.</p>
+<h1 id="task-l62---displaying-dates-in-a-specific-format"><a class="header" href="#task-l62---displaying-dates-in-a-specific-format">Task L6.2 - Displaying Dates in a Specific Format</a></h1>
+<p>In this task, you will create a date object and display it in a specific format.
+First, create a date object representing <code>March 5, 2023 at 3:35 PM</code>.
+Then, log the date object to the console using the following formats using the methods from the Getting Date Components section:</p>
+<ul>
+<li><code>HH:mm:ss.fff</code></li>
+<li><code>MM/DD/YYYY HH:mm</code></li>
+<li><code>DD-MM-YYYY</code></li>
+<li><code>Weekday, MM DD, YYYY</code></li>
+</ul>
+<p>fff represents the milliseconds.</p>
+<h1 id="task-l63---changing-dates"><a class="header" href="#task-l63---changing-dates">Task L6.3 - Changing Dates</a></h1>
+<p>In this task, you will create a date object and change it.
+First, create a date object representing <code>March 5, 2023 at 3:35 PM</code>.
+Then, change the date to <code>April 2, 2021 at 5:53 AM</code> and log the date object to the console.
+You can use the methods from the Setting Date Components section.</p>
+<h1 id="task-l64---comparing-dates"><a class="header" href="#task-l64---comparing-dates">Task L6.4 - Comparing Dates</a></h1>
+<p>In this task, you will create two date objects and compare them.
+First, create a date object representing <code>March 5, 2023 at 3:35 PM</code>.
+Then, create another date object representing <code>April 2, 2021 at 5:53 AM</code>.
+Next, write down the result of comparing the two date objects using the <code>&gt;</code> and <code>&lt;</code> operators.
+Finally, compare the two date objects using the <code>&gt;</code> and <code>&lt;</code> operators and log the result to the console.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-7---arrays-l7"><a class="header" href="#lesson-7---arrays-l7">Lesson 7 - Arrays (L7)</a></h1>
 <p>In this lesson you will learn about arrays, which are a way to store multiple values in a single variable.
 You will learn how to create arrays, how to access their values, and how to modify them.
