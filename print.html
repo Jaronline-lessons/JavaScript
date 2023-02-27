@@ -964,7 +964,207 @@ Finally, compare the two date objects using the <code>&gt;</code> and <code>&lt;
 <p>In this lesson you will learn about arrays, which are a way to store multiple values in a single variable.
 You will learn how to create arrays, how to access their values, and how to modify them.
 You will also learn about the <code>length</code> property, which is used to find out how many values are in an array.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-7---arrays-l7-1"><a class="header" href="#lesson-7---arrays-l7-1">Lesson 7 - Arrays (L7)</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-7---arrays-l7-1"><a class="header" href="#lesson-7---arrays-l7-1">Lesson 7 - Arrays (L7)</a></h1>
+<p>An array is a data structure that stores a list of values.
+Arrays are very useful for storing data that is related to each other.
+For example, if we want to store a list of student numbers or store x and y coordinates of a point, we can use an array.</p>
+<h1 id="creating-an-array"><a class="header" href="#creating-an-array">Creating an array</a></h1>
+<p>To create an array in JavaScript, we use square brackets.
+Inside the brackets, we can put any number of values, separated by commas.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+</code></pre>
+<p>This example only has numbers, but we can put any type of value in an array.
+For example, we can put strings:</p>
+<pre><code class="language-js">let myArray = [&quot;Hello&quot;, &quot;World&quot;];
+</code></pre>
+<p>We can also put variables:</p>
+<pre><code class="language-js">let myArray = [myVariable, myOtherVariable];
+</code></pre>
+<p>We can also mix different data types in an array:</p>
+<pre><code class="language-js">let myArray = [1, &quot;Hello&quot;, myVariable];
+</code></pre>
+<p>We can even put other arrays inside an array, these are called multidimensional arrays:</p>
+<pre><code class="language-js">let myArray = [[1, 2, 3], [4, 5, 6]];
+</code></pre>
+<h1 id="accessing-values-in-an-array"><a class="header" href="#accessing-values-in-an-array">Accessing values in an array</a></h1>
+<p>Arrays have an index, which is the position of the value in the array.
+The first value in an array has an index of 0, the second value has an index of 1, and so on.
+For example, in the array <code>[1, 2, 3]</code>, the value <code>1</code> has an index of 0, the value <code>2</code> has an index of 1, and the value <code>3</code> has an index of 2.</p>
+<p>To access a value in an array, we use square brackets after the array name, and put the index of the value we want to access inside the brackets.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+let firstValue = myArray[0]; // 1
+let secondValue = myArray[1]; // 2
+let thirdValue = myArray[2]; // 3
+</code></pre>
+<p>To access a value in a multidimensional array, we can use multiple square brackets.
+For example:</p>
+<pre><code class="language-js">let myArray = [[1, 2, 3], [4, 5, 6]];
+let firstValue = myArray[0][0]; // 1
+let secondValue = myArray[0][1]; // 2
+let thirdValue = myArray[0][2]; // 3
+let fourthValue = myArray[1][0]; // 4
+let fifthValue = myArray[1][1]; // 5
+let sixthValue = myArray[1][2]; // 6
+</code></pre>
+<p>The first square bracket is the index of the array we want to access, and the second square bracket is the index of the value we want to access in that array.</p>
+<h1 id="modifying-values-in-an-array"><a class="header" href="#modifying-values-in-an-array">Modifying values in an array</a></h1>
+<p>To modify a value in an array, we can use the same syntax as accessing a value.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+myArray[0] = 10;
+myArray[1] = 20;
+myArray[2] = 30;
+</code></pre>
+<p>This will change the values in the array to <code>[10, 20, 30, 4, 5]</code>.</p>
+<p>We can also use the same syntax to modify a value in a multidimensional array.
+For example:</p>
+<pre><code class="language-js">let myArray = [[1, 2, 3], [4, 5, 6]];
+myArray[0][0] = 10;
+myArray[0][1] = 20;
+myArray[0][2] = 30;
+myArray[1][0] = 40;
+myArray[1][1] = 50;
+myArray[1][2] = 60;
+</code></pre>
+<p>This will change the values in the array to <code>[[10, 20, 30], [40, 50, 60]]</code>.</p>
+<h1 id="array-methods"><a class="header" href="#array-methods">Array methods</a></h1>
+<p>Arrays have a number of methods that we can use to modify the array.</p>
+<h2 id="the-join-method"><a class="header" href="#the-join-method">The join method</a></h2>
+<p>The <code>join</code> method joins all the values in the array into a string.
+It takes an optional parameter, which is the string that will be used to join the values.</p>
+<p>For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const joined = myArray.join();
+console.log(joined); // &quot;1,2,3,4,5&quot;
+</code></pre>
+<p>If we pass a string as the parameter, that string will be used to join the values.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const joined = myArray.join(&quot;-&quot;);
+console.log(joined); // &quot;1-2-3-4-5&quot;
+</code></pre>
+<h2 id="the-push-method"><a class="header" href="#the-push-method">The push method</a></h2>
+<p>The <code>push</code> method adds a value to the end of the array.
+It returns the new length of the array.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const newLength = myArray.push(6);
+console.log(newLength); // 6
+console.log(myArray); // [1, 2, 3, 4, 5, 6]
+</code></pre>
+<h2 id="the-pop-method"><a class="header" href="#the-pop-method">The pop method</a></h2>
+<p>The <code>pop</code> method removes the last value in the array.
+It returns the value that was removed.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const lastValue = myArray.pop();
+console.log(lastValue); // 5
+console.log(myArray); // [1, 2, 3, 4]
+</code></pre>
+<h2 id="the-unshift-method"><a class="header" href="#the-unshift-method">The unshift method</a></h2>
+<p>The <code>unshift</code> method adds a value to the start of the array.
+It returns the new length of the array.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const newLength = myArray.unshift(0);
+console.log(newLength); // 6
+console.log(myArray); // [0, 1, 2, 3, 4, 5]
+</code></pre>
+<h2 id="the-shift-method"><a class="header" href="#the-shift-method">The shift method</a></h2>
+<p>The <code>shift</code> method removes the first value in the array.
+It returns the value that was removed.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const firstValue = myArray.shift();
+console.log(firstValue); // 1
+console.log(myArray); // [2, 3, 4, 5]
+</code></pre>
+<h2 id="the-splice-method"><a class="header" href="#the-splice-method">The splice method</a></h2>
+<p>The <code>splice</code> method removes a number of values from the array, starting at a given index.
+It returns an array containing the values that were removed.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const removedValues = myArray.splice(2, 2);
+console.log(removedValues); // [3, 4]
+console.log(myArray); // [1, 2, 5]
+</code></pre>
+<p>The first argument is the index to start removing values from.
+The second argument is the number of values to remove.</p>
+<p>You can also use the <code>splice</code> method to add values to the array.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const removedValues = myArray.splice(2, 0, 10, 20, 30);
+console.log(removedValues); // []
+console.log(myArray); // [1, 2, 10, 20, 30, 3, 4, 5]
+</code></pre>
+<p>The first argument is the index to start adding values at.
+The second argument is the number of values to remove.
+The third argument and any subsequent arguments are the values to add to the array.</p>
+<h2 id="the-slice-method"><a class="header" href="#the-slice-method">The slice method</a></h2>
+<p>The <code>slice</code> method returns a copy of a portion of the array.
+For example:</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+const newArray = myArray.slice(2, 4);
+console.log(newArray); // [3, 4]
+console.log(myArray); // [1, 2, 3, 4, 5]
+</code></pre>
+<p>The first argument is the index to start copying values from.
+The second argument is the index to stop copying values at.
+The second argument is optional, and if it is not provided, the method will copy all values from the first argument to the end of the array.</p>
+<p>There are a number of other array methods, but these are the most commonly used ones.
+We will learn about the other methods as we need them.</p>
+<h1 id="the-length-property"><a class="header" href="#the-length-property">The length property</a></h1>
+<p>Arrays have a property called <code>length</code>, which is the number of values in the array.
+To access the length property, we use a dot after the array name, and then write <code>length</code>.</p>
+<pre><code class="language-js">let myArray = [1, 2, 3, 4, 5];
+console.log(myArray.length); // 5
+myArray.push(6);
+console.log(myArray.length); // 6
+myArray.pop();
+console.log(myArray.length); // 5
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-7---arrays-l7-2"><a class="header" href="#lesson-7---arrays-l7-2">Lesson 7 - Arrays (L7)</a></h1>
+<h1 id="task-l71---accessing-values-in-an-array"><a class="header" href="#task-l71---accessing-values-in-an-array">Task L7.1 - Accessing values in an array</a></h1>
+<p>Create an array called <code>myArray</code> that contains the numbers 1, 2, 3, 4, and 5.
+Next, create a variable called <code>firstValue</code> and set it equal to the first value in the array.
+Finally, create a variable called <code>secondValue</code> and set it equal to the second value in the array.
+Log the values of <code>firstValue</code> and <code>secondValue</code> to the console.
+This should print <code>1</code> and <code>2</code>.</p>
+<h1 id="task-l72---accessing-values-in-a-multidimensional-array"><a class="header" href="#task-l72---accessing-values-in-a-multidimensional-array">Task L7.2 - Accessing values in a multidimensional array</a></h1>
+<p>Let's imagine we have a 2D array that represents a 3x3 grid.
+The array looks like this:</p>
+<pre><code class="language-js">let grid = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+</code></pre>
+<p>Create a variable called <code>firstValue</code> and set it equal to the first value in first row of the array.
+Create a variable called <code>secondValue</code> and set it equal to the second value in the third row of the array.
+Log the values of <code>firstValue</code> and <code>secondValue</code> to the console.
+This should print <code>1</code> and <code>8</code>.</p>
+<h1 id="task-l73---changing-values-in-an-array"><a class="header" href="#task-l73---changing-values-in-an-array">Task L7.3 - Changing values in an array</a></h1>
+<p>Create an array called <code>myArray</code> that contains the numbers 1, 2, 3, 4, and 5.
+Next, change the first value in the array to 6.
+Then, change the third value in the array to 7.
+Finally, log the array to the console.
+This should print <code>[6, 2, 7, 4, 5]</code>.</p>
+<h1 id="task-l74---array-methods"><a class="header" href="#task-l74---array-methods">Task L7.4 - Array methods</a></h1>
+<h2 id="l741"><a class="header" href="#l741">L7.4.1</a></h2>
+<p>Create an array called <code>myArray</code> that contains the numbers 1, 2, 3, 4, and 5.
+Next, add the number 6 to the end of the array.
+Then, remove the first value from the array.
+Then, use the <code>join</code> method to join the values in the array into a string.
+Finally, log the string to the console.
+This should print <code>2,3,4,5,6</code>.</p>
+<h2 id="l742"><a class="header" href="#l742">L7.4.2</a></h2>
+<p>Create an array called <code>myArray</code> that contains the numbers 1, 2, 3, 4, and 5.
+Next, remove the first 3 values from the array.
+Then, use the <code>join</code> method to join the values in the array into a string.
+Finally, log the string to the console.
+This should print <code>4,5</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8"><a class="header" href="#lesson-8---conditional-statements-l8">Lesson 8 - Conditional Statements (L8)</a></h1>
 <p>In this lesson you will learn how to use conditional statements in JavaScript.
 You will learn how to use the <code>if</code> statement, the <code>else</code> statement, the <code>else if</code> statement, and the <code>switch</code> statement.</p>
