@@ -71,10 +71,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -1167,7 +1169,8 @@ Finally, log the string to the console.
 This should print <code>4,5</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8"><a class="header" href="#lesson-8---conditional-statements-l8">Lesson 8 - Conditional Statements (L8)</a></h1>
 <p>In this lesson you will learn how to use conditional statements in JavaScript.
-You will learn how to use the <code>if</code> statement, the <code>else</code> statement, the <code>else if</code> statement, and the <code>switch</code> statement.</p>
+You will learn how to use the <code>if</code> statement, the <code>else</code> statement, the <code>else if</code> statement, and the <code>switch</code> statement.
+Lastly you will learn how to use the ternary operator.</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8-1"><a class="header" href="#lesson-8---conditional-statements-l8-1">Lesson 8 - Conditional Statements (L8)</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-9---loops-l9"><a class="header" href="#lesson-9---loops-l9">Lesson 9 - Loops (L9)</a></h1>
 <p>In this lesson you will learn about loops.
