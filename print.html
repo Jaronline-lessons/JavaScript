@@ -1170,8 +1170,206 @@ This should print <code>4,5</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8"><a class="header" href="#lesson-8---conditional-statements-l8">Lesson 8 - Conditional Statements (L8)</a></h1>
 <p>In this lesson you will learn how to use conditional statements in JavaScript.
 You will learn how to use the <code>if</code> statement, the <code>else</code> statement, the <code>else if</code> statement, and the <code>switch</code> statement.
-Lastly you will learn how to use the ternary operator.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8-1"><a class="header" href="#lesson-8---conditional-statements-l8-1">Lesson 8 - Conditional Statements (L8)</a></h1>
+Lastly you will learn how to use the ternary and nullish coalescing operators.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8-1"><a class="header" href="#lesson-8---conditional-statements-l8-1">Lesson 8 - Conditional Statements (L8)</a></h1>
+<p>Conditional statements are used to make decisions in a program.
+They allow the program to check if a condition is true or false, and then run different code depending on the result.</p>
+<h1 id="if-statements"><a class="header" href="#if-statements">If statements</a></h1>
+<p>The simplest form of a conditional statement is the <code>if</code> statement.
+It has the following syntax:</p>
+<pre><code class="language-js">if (condition) {
+  // code to run if condition is true
+}
+</code></pre>
+<p>The <code>condition</code> is an expression that evaluates to a boolean value.
+If the value is <code>true</code>, the code inside the curly braces is executed.
+If the value is <code>false</code>, the code is skipped.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the code is skipped.
+The output is:</p>
+<pre><code></code></pre>
+<h1 id="else-statements"><a class="header" href="#else-statements">Else statements</a></h1>
+<p>The <code>if</code> statement can be followed by an <code>else</code> statement.
+The <code>else</code> statement has the following syntax:</p>
+<pre><code class="language-js">if (condition) {
+  // code to run if condition is true
+} else {
+  // code to run if condition is false
+}
+</code></pre>
+<p>The <code>else</code> statement is used to run different code if the condition is <code>false</code>.
+Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+} else {
+  console.log('x is negative');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the first set of curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the code inside the second set of curly braces is executed.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<h1 id="else-if-statements"><a class="header" href="#else-if-statements">Else if statements</a></h1>
+<p>The <code>if</code> statement can be followed by any number of <code>else if</code> statements.
+The <code>else if</code> statement has the following syntax:</p>
+<pre><code class="language-js">if (condition1) {
+  // code to run if condition1 is true
+} else if (condition2) {
+  // code to run if condition2 is true
+} else {
+  // code to run if all conditions are false
+}
+</code></pre>
+<p>The <code>else if</code> statement is used to check additional conditions if the previous conditions are <code>false</code>.
+Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+} else if (x &lt; 0) {
+  console.log('x is negative');
+} else {
+  console.log('x is zero');
+}
+</code></pre>
+<p>In this example, the first condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the first set of curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the first condition becomes <code>false</code>, so the second condition is checked.
+Since <code>x</code> is <code>-5</code>, the second condition is <code>true</code>, so the code inside the second set of curly braces is executed.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>0</code>, both the first and second conditions become <code>false</code>, so the code inside the third set of curly braces is executed.
+The output is:</p>
+<pre><code>x is zero
+</code></pre>
+<h1 id="logical-operators-1"><a class="header" href="#logical-operators-1">Logical operators</a></h1>
+<p>The <code>if</code> statement can use logical operators to combine multiple conditions.
+The logical operators can be found in lesson 3.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+let y = 10;
+
+if (x &gt; 0 &amp;&amp; y &gt; 0) {
+  console.log('x and y are positive');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0 &amp;&amp; y &gt; 0</code>.
+Since both <code>x</code> and <code>y</code> are positive, the condition is <code>true</code>, so the code inside the curly braces is executed.
+The output is:</p>
+<pre><code>x and y are positive
+</code></pre>
+<h1 id="switch-statements"><a class="header" href="#switch-statements">Switch statements</a></h1>
+<p>The <code>switch</code> statement is used to run different code depending on the value of a variable.
+It has the following syntax:</p>
+<pre><code class="language-js">switch (variable) {
+  case value1:
+    // code to run if variable is value1
+    break;
+  case value2:
+    // code to run if variable is value2
+    break;
+  default:
+    // code to run if variable is not value1 or value2
+}
+</code></pre>
+<p>The <code>switch</code> statement is used to check the value of a variable.
+If the value matches one of the <code>case</code> values, the code inside the corresponding <code>case</code> is executed.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+switch (x) {
+  case 1:
+    console.log('x is 1');
+    break;
+  case 2:
+    console.log('x is 2');
+    break;
+  case 3:
+    console.log('x is 3');
+    break;
+  default:
+    console.log('x is not 1, 2, or 3');
+}
+</code></pre>
+<p>In this example, the value of <code>x</code> is <code>5</code>.
+Since <code>x</code> does not match any of the <code>case</code> values, the code inside the <code>default</code> is executed.
+The output is:</p>
+<pre><code>x is not 1, 2, or 3
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>2</code>, the value of <code>x</code> matches the second <code>case</code> value, so the code inside the second <code>case</code> is executed.
+The output is:</p>
+<pre><code>x is 2
+</code></pre>
+<h1 id="ternary-operator"><a class="header" href="#ternary-operator">Ternary operator</a></h1>
+<p>The ternary operator is a shorthand for the <code>if</code> statement.
+It has the following syntax:</p>
+<pre><code class="language-js">condition ? value1 : value2
+</code></pre>
+<p>The ternary operator is used to check a condition and return one of two values.
+If the condition is <code>true</code>, the first value is returned.
+If the condition is <code>false</code>, the second value is returned.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+let result = x &gt; 0 ? 'x is positive' : 'x is negative';
+console.log(result);
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the first value is returned.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the second value is returned.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<h1 id="nullish-coalescing-operator"><a class="header" href="#nullish-coalescing-operator">Nullish coalescing operator</a></h1>
+<p>The nullish coalescing operator is a shorthand for the <code>if</code> statement.
+Specifically, it is a shorthand for checking if a variable is <code>null</code> or <code>undefined</code>.
+It has the following syntax:</p>
+<pre><code class="language-js">variable ?? value
+</code></pre>
+<p>The nullish coalescing operator is used to check if a variable is <code>null</code> or <code>undefined</code>.
+If the variable is <code>null</code> or <code>undefined</code>, the second value is returned.
+Otherwise, the variable is returned.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+let result = x ?? 0;
+console.log(result);
+</code></pre>
+<p>In this example, the variable <code>x</code> is not <code>null</code> or <code>undefined</code>, so the variable is returned.
+The output is:</p>
+<pre><code>5
+</code></pre>
+<p>If we set the variable <code>x</code> to <code>null</code>, the variable is <code>null</code>, so the second value is returned.
+The output is:</p>
+<pre><code>0
+</code></pre>
+<p>The same thing happens if we set the variable <code>x</code> to <code>undefined</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-8---conditional-statements-l8-2"><a class="header" href="#lesson-8---conditional-statements-l8-2">Lesson 8 - Conditional Statements (L8)</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lesson-9---loops-l9"><a class="header" href="#lesson-9---loops-l9">Lesson 9 - Loops (L9)</a></h1>
 <p>In this lesson you will learn about loops.
 Loops are a way to repeat a block of code multiple times.
