@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Preparation - JavaScript</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="JavaScript lessons created by Jaronline">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Lessons</li><li class="chapter-item expanded "><a href="../lessons/l1-introduction.html"><strong aria-hidden="true">1.</strong> Lesson 1 - Console and Comments</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l1-preparation.html"><strong aria-hidden="true">1.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l1-tasks.html"><strong aria-hidden="true">1.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l2-introduction.html"><strong aria-hidden="true">2.</strong> Lesson 2 - Data Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l2-preparation.html"><strong aria-hidden="true">2.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l2-tasks.html"><strong aria-hidden="true">2.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l3-introduction.html"><strong aria-hidden="true">3.</strong> Lesson 3 - Logical Operators</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l3-preparation.html"><strong aria-hidden="true">3.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l3-tasks.html"><strong aria-hidden="true">3.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l4-introduction.html"><strong aria-hidden="true">4.</strong> Lesson 4 - Variables</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l4-preparation.html"><strong aria-hidden="true">4.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l4-tasks.html"><strong aria-hidden="true">4.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l5-introduction.html"><strong aria-hidden="true">5.</strong> Lesson 5 - Var, Let and Const</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l5-preparation.html"><strong aria-hidden="true">5.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l5-tasks.html"><strong aria-hidden="true">5.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l6-introduction.html"><strong aria-hidden="true">6.</strong> Lesson 6 - Dates</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l6-preparation.html"><strong aria-hidden="true">6.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l6-tasks.html"><strong aria-hidden="true">6.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l7-introduction.html"><strong aria-hidden="true">7.</strong> Lesson 7 - Arrays</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l7-preparation.html"><strong aria-hidden="true">7.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l7-tasks.html"><strong aria-hidden="true">7.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l8-introduction.html"><strong aria-hidden="true">8.</strong> Lesson 8 - Conditional Statements</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l8-preparation.html" class="active"><strong aria-hidden="true">8.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l8-tasks.html"><strong aria-hidden="true">8.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l9-introduction.html"><strong aria-hidden="true">9.</strong> Lesson 9 - Loops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l9-preparation.html"><strong aria-hidden="true">9.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l9-tasks.html"><strong aria-hidden="true">9.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l10-introduction.html"><strong aria-hidden="true">10.</strong> Lesson 10 - Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l10-preparation.html"><strong aria-hidden="true">10.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l10-tasks.html"><strong aria-hidden="true">10.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l11-introduction.html"><strong aria-hidden="true">11.</strong> Lesson 11 - Arrow Functions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l11-preparation.html"><strong aria-hidden="true">11.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l11-tasks.html"><strong aria-hidden="true">11.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l12-introduction.html"><strong aria-hidden="true">12.</strong> Lesson 12 - Error Handling</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l12-preparation.html"><strong aria-hidden="true">12.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l12-tasks.html"><strong aria-hidden="true">12.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l13-introduction.html"><strong aria-hidden="true">13.</strong> Lesson 13 - Promises</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l13-preparation.html"><strong aria-hidden="true">13.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l13-tasks.html"><strong aria-hidden="true">13.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l14-introduction.html"><strong aria-hidden="true">14.</strong> Lesson 14 - Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l14-preparation.html"><strong aria-hidden="true">14.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l14-tasks.html"><strong aria-hidden="true">14.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><a href="../lessons/l15-introduction.html"><strong aria-hidden="true">15.</strong> Lesson 15 - Objects</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lessons/l15-preparation.html"><strong aria-hidden="true">15.1.</strong> Preparation</a></li><li class="chapter-item expanded "><a href="../lessons/l15-tasks.html"><strong aria-hidden="true">15.2.</strong> Tasks</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Projects</li><li class="chapter-item expanded "><a href="../projects/p1-calculator.html"><strong aria-hidden="true">16.</strong> Calculator</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">JavaScript</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="lesson-8---conditional-statements-l8"><a class="header" href="#lesson-8---conditional-statements-l8">Lesson 8 - Conditional Statements (L8)</a></h1>
+<p>Conditional statements are used to make decisions in a program.
+They allow the program to check if a condition is true or false, and then run different code depending on the result.</p>
+<h1 id="if-statements"><a class="header" href="#if-statements">If statements</a></h1>
+<p>The simplest form of a conditional statement is the <code>if</code> statement.
+It has the following syntax:</p>
+<pre><code class="language-js">if (condition) {
+  // code to run if condition is true
+}
+</code></pre>
+<p>The <code>condition</code> is an expression that evaluates to a boolean value.
+If the value is <code>true</code>, the code inside the curly braces is executed.
+If the value is <code>false</code>, the code is skipped.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the code is skipped.
+The output is:</p>
+<pre><code></code></pre>
+<h1 id="else-statements"><a class="header" href="#else-statements">Else statements</a></h1>
+<p>The <code>if</code> statement can be followed by an <code>else</code> statement.
+The <code>else</code> statement has the following syntax:</p>
+<pre><code class="language-js">if (condition) {
+  // code to run if condition is true
+} else {
+  // code to run if condition is false
+}
+</code></pre>
+<p>The <code>else</code> statement is used to run different code if the condition is <code>false</code>.
+Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+} else {
+  console.log('x is negative');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the first set of curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the code inside the second set of curly braces is executed.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<h1 id="else-if-statements"><a class="header" href="#else-if-statements">Else if statements</a></h1>
+<p>The <code>if</code> statement can be followed by any number of <code>else if</code> statements.
+The <code>else if</code> statement has the following syntax:</p>
+<pre><code class="language-js">if (condition1) {
+  // code to run if condition1 is true
+} else if (condition2) {
+  // code to run if condition2 is true
+} else {
+  // code to run if all conditions are false
+}
+</code></pre>
+<p>The <code>else if</code> statement is used to check additional conditions if the previous conditions are <code>false</code>.
+Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+if (x &gt; 0) {
+  console.log('x is positive');
+} else if (x &lt; 0) {
+  console.log('x is negative');
+} else {
+  console.log('x is zero');
+}
+</code></pre>
+<p>In this example, the first condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the code inside the first set of curly braces is executed.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the first condition becomes <code>false</code>, so the second condition is checked.
+Since <code>x</code> is <code>-5</code>, the second condition is <code>true</code>, so the code inside the second set of curly braces is executed.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>0</code>, both the first and second conditions become <code>false</code>, so the code inside the third set of curly braces is executed.
+The output is:</p>
+<pre><code>x is zero
+</code></pre>
+<h1 id="logical-operators"><a class="header" href="#logical-operators">Logical operators</a></h1>
+<p>The <code>if</code> statement can use logical operators to combine multiple conditions.
+The logical operators can be found in lesson 3.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+let y = 10;
+
+if (x &gt; 0 &amp;&amp; y &gt; 0) {
+  console.log('x and y are positive');
+}
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0 &amp;&amp; y &gt; 0</code>.
+Since both <code>x</code> and <code>y</code> are positive, the condition is <code>true</code>, so the code inside the curly braces is executed.
+The output is:</p>
+<pre><code>x and y are positive
+</code></pre>
+<h1 id="switch-statements"><a class="header" href="#switch-statements">Switch statements</a></h1>
+<p>The <code>switch</code> statement is used to run different code depending on the value of a variable.
+It has the following syntax:</p>
+<pre><code class="language-js">switch (variable) {
+  case value1:
+    // code to run if variable is value1
+    break;
+  case value2:
+    // code to run if variable is value2
+    break;
+  default:
+    // code to run if variable is not value1 or value2
+}
+</code></pre>
+<p>The <code>switch</code> statement is used to check the value of a variable.
+If the value matches one of the <code>case</code> values, the code inside the corresponding <code>case</code> is executed.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+switch (x) {
+  case 1:
+    console.log('x is 1');
+    break;
+  case 2:
+    console.log('x is 2');
+    break;
+  case 3:
+    console.log('x is 3');
+    break;
+  default:
+    console.log('x is not 1, 2, or 3');
+}
+</code></pre>
+<p>In this example, the value of <code>x</code> is <code>5</code>.
+Since <code>x</code> does not match any of the <code>case</code> values, the code inside the <code>default</code> is executed.
+The output is:</p>
+<pre><code>x is not 1, 2, or 3
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>2</code>, the value of <code>x</code> matches the second <code>case</code> value, so the code inside the second <code>case</code> is executed.
+The output is:</p>
+<pre><code>x is 2
+</code></pre>
+<h1 id="ternary-operator"><a class="header" href="#ternary-operator">Ternary operator</a></h1>
+<p>The ternary operator is a shorthand for the <code>if</code> statement.
+It has the following syntax:</p>
+<pre><code class="language-js">condition ? value1 : value2
+</code></pre>
+<p>The ternary operator is used to check a condition and return one of two values.
+If the condition is <code>true</code>, the first value is returned.
+If the condition is <code>false</code>, the second value is returned.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+let result = x &gt; 0 ? 'x is positive' : 'x is negative';
+console.log(result);
+</code></pre>
+<p>In this example, the condition is <code>x &gt; 0</code>.
+Since <code>x</code> is <code>5</code>, the condition is <code>true</code>, so the first value is returned.
+The output is:</p>
+<pre><code>x is positive
+</code></pre>
+<p>If we change the value of <code>x</code> to <code>-5</code>, the condition becomes <code>false</code>, so the second value is returned.
+The output is:</p>
+<pre><code>x is negative
+</code></pre>
+<h1 id="nullish-coalescing-operator"><a class="header" href="#nullish-coalescing-operator">Nullish coalescing operator</a></h1>
+<p>The nullish coalescing operator is a shorthand for the <code>if</code> statement.
+Specifically, it is a shorthand for checking if a variable is <code>null</code> or <code>undefined</code>.
+It has the following syntax:</p>
+<pre><code class="language-js">variable ?? value
+</code></pre>
+<p>The nullish coalescing operator is used to check if a variable is <code>null</code> or <code>undefined</code>.
+If the variable is <code>null</code> or <code>undefined</code>, the second value is returned.
+Otherwise, the variable is returned.</p>
+<p>Here is an example:</p>
+<pre><code class="language-js">let x = 5;
+
+let result = x ?? 0;
+console.log(result);
+</code></pre>
+<p>In this example, the variable <code>x</code> is not <code>null</code> or <code>undefined</code>, so the variable is returned.
+The output is:</p>
+<pre><code>5
+</code></pre>
+<p>If we set the variable <code>x</code> to <code>null</code>, the variable is <code>null</code>, so the second value is returned.
+The output is:</p>
+<pre><code>0
+</code></pre>
+<p>The same thing happens if we set the variable <code>x</code> to <code>undefined</code>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../lessons/l8-introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../lessons/l8-tasks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../lessons/l8-introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../lessons/l8-tasks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
