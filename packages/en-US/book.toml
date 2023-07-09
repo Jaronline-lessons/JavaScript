@@ -1,11 +1,11 @@
 [book]
 authors = ["Jaron Zijlstra"]
 description = "JavaScript lessons created by Jaronline"
-language = "en"
-multilingual = false
+language = "en-US"
+multilingual = true
 src = "src"
 title = "JavaScript"
 
 [build]
-build-dir = "target/docs"
+build-dir = "../../target/docs/en-US"
 create-missing = false

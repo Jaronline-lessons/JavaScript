@@ -1,0 +1,11 @@
+[book]
+authors = ["Jaron Zijlstra"]
+description = "JavaScript lessen gemaakt door Jaronline"
+language = "nl"
+multilingual = true
+src = "src"
+title = "JavaScript"
+
+[build]
+build-dir = "../../target/docs/nl"
+create-missing = false

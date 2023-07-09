@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Build all books
+for g in packages/*/; do
+  if test -f "$g/book.toml"; then
+    echo "Building $g"
+    mdbook build "$g"
+    echo "Done building $g"
+  fi
+done
+
+echo "--------------------"
+
+# Copy home files to target root
+echo "Copying home files"
+cp -r packages/home/* target/docs
+echo "Done copying home files"
+
+echo "--------------------"
+
+# Fix root paths in html files
+echo "Fixing root paths"
+find ./target/docs -type f -name '*.html' -print0 | xargs -0 sed -i 's/..\/..\/home/../g'
+echo "Done fixing root paths"
+
+echo "--------------------"
