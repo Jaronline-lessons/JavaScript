@@ -20,14 +20,14 @@ jobs:
       - name: Check links in markdown
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
-          folder-path: 'src/'
+          folder-path: 'packages/en-US/src, packages/nl/src'
 
       - name: Run mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: "latest"
       - run: |
-          mdbook build
+          ./build
       - name: Publish book website
         uses: peaceiris/actions-gh-pages@v3
         with:
