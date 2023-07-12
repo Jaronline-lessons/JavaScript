@@ -8,9 +8,23 @@
 	<title>Choose a Language - JavaScript</title>
 </head>
 <body>
+	<h1>Choose a Language</h1>
+	<p>Redirecting to English in <span data-time="5"></span> seconds...</p>
+	<a href="./en-US">English</a>
+	<a href="./nl">Nederlands</a>
 	<script>
-        // Temporary redirect to English
-		location.replace(`./en-US`);
+		// Set the time to 5 seconds
+		const time = document.querySelector(`[data-time]`);
+		const seconds = parseInt(time.dataset.time);
+		time.innerText = seconds;
+		// Count down every second
+		setInterval(() => {
+			time.innerText = parseInt(time.innerText) - 1;
+		}, 1_000);
+		// Temporary redirect to English after 5 seconds
+		setTimeout(() => {
+			location.replace(`./en-US`);
+		}, 5_000);
 	</script>
 </body>
 </html>
