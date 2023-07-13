@@ -1,1 +1,41 @@
 #!/usr/bin/env bash
+
+SERVE_DIRECTORY=$1
+
+# If no directory is specified, give usage and exit
+if [ -z "$SERVE_DIRECTORY" ]; then
+  echo "No directory specified."
+  echo "Usage:"
+  echo "serve <directory>"
+  exit 1
+fi
+
+SERVE_DIRECTORY="packages/$SERVE_DIRECTORY"
+
+if [ ! -d "$SERVE_DIRECTORY" ]; then
+  echo "$SERVE_DIRECTORY does not exist."
+  exit 1
+fi
+
+if [ ! -f "$SERVE_DIRECTORY/book.toml" ]; then
+  echo "$SERVE_DIRECTORY is not a valid mdbook directory."
+  exit 1
+fi
+
+HOME_DIR="$SERVE_DIRECTORY/src/home"
+if [ -d "$HOME_DIR" ]; then
+  echo "Removing $HOME_DIR"
+  rm -rf "$HOME_DIR"
+fi
+
+echo "Copying packages\home to $HOME_DIR"
+cp -r packages/home "$HOME_DIR"
+
+function after_sigint() {
+  echo "Cleaning up $HOME_DIR"
+  rm -rf "$HOME_DIR"
+}
+
+trap after_sigint SIGINT
+
+mdbook serve "$SERVE_DIRECTORY"
