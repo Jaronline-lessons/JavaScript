@@ -3,13 +3,13 @@
 # Build all books
 for g in packages/*/; do
   # Remove home directory from book
-  if test -d "$g/src/home"; then
+  if [ -d "$g/src/home" ]; then
     echo "Removing home directory from $g"
     rm -rf "$g/src/home"
     echo "Done removing home directory from $g"
   fi
 
-  if test -f "$g/book.toml"; then
+  if [ -f "$g/book.toml" ]; then
     echo "Building $g"
     mdbook build "$g"
     echo "Done building $g"
