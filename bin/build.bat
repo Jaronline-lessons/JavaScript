@@ -2,6 +2,13 @@
 
 Rem Build all books
 FOR /D %%G IN ("packages\*") DO (
+    Rem Remove home directory from book
+    IF EXIST "%%G\src\home" (
+        echo Removing home directory from %%~nxG
+        rmdir /S/Q "%%G\src\home"
+        echo Done removing home directory from %%~nxG
+    )
+
     IF EXIST "%%G\book.toml" (
         echo Building %%~nxG
         mdbook build "%%G"
