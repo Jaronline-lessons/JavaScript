@@ -1,5 +1,7 @@
 @ECHO OFF
 
+SETLOCAL
+
 SET SERVE_DIRECTORY=%1
 
 Rem If no directory is specified, give usage and exit
@@ -36,5 +38,4 @@ mdbook serve %SERVE_DIRECTORY%
 echo Cleaning up %HOME_DIR%
 rmdir /S/Q "%HOME_DIR%"
 
-SET "HOME_DIR="
-SET "SERVE_DIRECTORY="
+ENDLOCAL

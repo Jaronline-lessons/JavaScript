@@ -1,5 +1,7 @@
 @ECHO OFF
 
+SETLOCAL
+
 Rem Build all books
 FOR /D %%G IN ("packages\*") DO (
     Rem Remove home directory from book
@@ -33,3 +35,5 @@ FOR /R "target/docs" %%G IN ("*.html") DO (
     )
 )
 echo Done fixing root paths
+
+ENDLOCAL
