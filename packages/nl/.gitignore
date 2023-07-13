@@ -1,1 +1,3 @@
 src/home
+src/sources/**/*
+!src/sources/*.zip
