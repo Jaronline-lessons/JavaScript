@@ -14,7 +14,7 @@ Next, log the following data types with the following values to the console:
 - undefined
 
 The output should look like this in the console:
-![Data Types](../../../home/images/console-data-types.png)
+![Data Types](../images/l2-console-data-types.png)
 
 Notice that the data types are logged in different colors.
 This is because the console uses different colors to distinguish between different data types.
@@ -34,7 +34,7 @@ Next, log the following data types of the following values to the console:
 - undefined
 
 The output should look like this in the console:
-![Data Types](../../../home/images/console-typeof.png)
+![Data Types](../images/l2-console-typeof.png)
 
 Notice that `typeof null` returns `object`.
 This is a bug in javascript that has been around for a long time and will probably never be fixed.

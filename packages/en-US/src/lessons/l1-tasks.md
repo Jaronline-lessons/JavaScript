@@ -24,7 +24,7 @@ To run the code, open the index.html file in your browser.
 To view the console, press F12 and select the console tab in the developer tools window.
 
 This is what your console should look like (Your dev tools window may look different):
-![Console](../../../home/images/hello-world-console.png)
+![Console](../images/l1-hello-world-console.png)
 
 # Task L1.2 - Console functions
 
@@ -36,7 +36,7 @@ Next log 4 different messages to the console using the console.log, console.info
 Add meaningful comments to your code to explain what each function does.
 
 This is what your console should look like (Your text may be different):
-![Console](../../../home/images/console-functions-console.png)
+![Console](../images/l1-console-functions.png)
 
 Notice the difference between the log, info, warn, and error messages.
 
