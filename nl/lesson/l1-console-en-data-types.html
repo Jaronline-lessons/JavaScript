@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introductie</a></li><li class="chapter-item expanded affix "><li class="part-title">Lessen</li><li class="chapter-item expanded "><a href="../lesson/l1-console-en-commentaar.html" class="active"><strong aria-hidden="true">1.</strong> Console en commentaar</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introductie</a></li><li class="chapter-item expanded affix "><li class="part-title">Lessen</li><li class="chapter-item expanded "><a href="../lesson/l1-console-en-data-types.html" class="active"><strong aria-hidden="true">1.</strong> Console en commentaar</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,13 +166,16 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="console-en-commentaar"><a class="header" href="#console-en-commentaar">Console en commentaar</a></h1>
+                        <hr />
 <p><a href="../sources/l1-start.zip">Download begin code</a>
-<br></p>
-<!-- [Download eind code](../sources/l1-end.zip) -->
+<br>
+<a href="../sources/l1-end.zip">Download eind code</a></p>
+<hr />
+<h1 id="console-en-data-types"><a class="header" href="#console-en-data-types">Console en data types</a></h1>
 <p>Welkom bij de eerste les van de cursus JavaScript basis.
 In deze eerste les ga ik het hebben over het gebruiken van de console, het maken van commentaar in je code
 en de verschillende data types die je kan gebruiken in JavaScript.</p>
+<h2 id="console"><a class="header" href="#console">Console</a></h2>
 <p>De console in JavaScript kan je gebruiken om berichten te tonen die alleen voor jou als programmeur bedoeld zijn.
 Om deze berichten te kunnen zien moet je de console openen in je browser.</p>
 <p>Voordat we dat doen gaan we eerst een bericht in de console zetten.</p>
@@ -201,6 +204,82 @@ console.error(&quot;Dit is een foutmelding&quot;);
 <p>Deze berichten kan je gebruiken om jezelf te helpen bij het programmeren.
 Als je bijvoorbeeld een foutmelding krijgt in de console weet je dat er iets mis is gegaan in je code.</p>
 <p>De berichten kunnen nu verwijderd worden, want we gaan deze niet gebruiken voor onze rekenmachine.</p>
+<h2 id="data-types"><a class="header" href="#data-types">Data types</a></h2>
+<p>Nu we weten hoe je een bericht in de console kan zetten gaan we kijken naar de verschillende data types die je kan gebruiken in JavaScript.
+Dit gaan we doen door ze te laten zien in de console.</p>
+<p>Zet de volgende berichten in de console:</p>
+<ul>
+<li><code>&quot;Hallo Wereld&quot;</code></li>
+<li><code>42</code></li>
+<li><code>true</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+</ul>
+<p>Je code ziet er nu ongeveer zo uit:</p>
+<pre><code class="language-js">console.log(&quot;Hallo Wereld&quot;);
+console.log(42);
+console.log(true);
+console.log(null);
+console.log(undefined);
+</code></pre>
+<p>Laten we voordat we de console openen kijken naar null en undefined.
+Deze twee data types lijken op elkaar, maar zijn niet hetzelfde.</p>
+<p><code>null</code> betekent dat er geen waarde is.<br />
+<code>undefined</code> betekent dat er geen waarde is toegewezen.</p>
+<p>Als je nu de console opent in de browser zie je de waardes van verschillende data types staan.
+Om nu de data types te kunnen zien moeten we iets toevoegen aan de code.</p>
+<p>Zet voor elke waarde de functie <code>typeof</code>:</p>
+<pre><code class="language-js">console.log(typeof &quot;Hallo Wereld&quot;);
+console.log(typeof 42);
+console.log(typeof true);
+console.log(typeof null);
+console.log(typeof undefined);
+</code></pre>
+<p>Als we nu de console openen in de browser zien we de verschillende data types staan.</p>
+<p><img src="../images/l1-console-typeof.png" alt="Console" /></p>
+<p>Heb je gemerkt dat null object geeft als data type?
+Dit is een fout in JavaScript die niet meer kan worden opgelost, omdat het te veel code zou breken.</p>
+<p>Als je hier meer over wilt weten kan je er <a href="https://2ality.com/2013/10/typeof-null.html">hier</a> meer over lezen.</p>
+<h2 id="commentaar"><a class="header" href="#commentaar">Commentaar</a></h2>
+<p>Nu we weten hoe je een bericht in de console kan zetten en de verschillende data types kan gebruiken gaan we kijken naar commentaar.
+Laten we om dit te doen bij elk console bericht commentaar plaatsen welk data type het is.</p>
+<p>Commentaar kan je gebruiken om uit te leggen wat je code doet.
+Dit is handig als je later je code terug leest en niet meer weet wat je hebt gedaan.</p>
+<p>Er zijn drie soorten commentaar in JavaScript:</p>
+<ul>
+<li><code>//</code> voor een enkele regel</li>
+<li><code>/* */</code> voor meerdere regels</li>
+<li><code>/** */</code> voor meerdere regels met speciale betekenis (wordt in deze cursus niet uitgelegd)</li>
+</ul>
+<p>Zet na elk console bericht commentaar met het datatype:</p>
+<pre><code class="language-js">console.log(&quot;Hallo Wereld&quot;); // string
+console.log(42); // number
+console.log(true); // boolean
+console.log(null); // object
+console.log(undefined); // undefined
+</code></pre>
+<p>Ik zal nu voordat we de console openen in de browser nog even uitleggen wat deze data types betekenen.</p>
+<ul>
+<li>Een string is een stuk tekst.</li>
+<li>Een number is een getal. Dit kan een heel getal zijn, maar ook een kommagetal.</li>
+<li>Een boolean is een waarde die <code>true</code> (waar) of <code>false</code> (onwaar) kan zijn.</li>
+<li>Een object is een verzameling van data. Hier gaan we later meer over leren.</li>
+<li>Undefined betekent - zoals eerder uitgelegd - dat er geen waarde is toegewezen.</li>
+</ul>
+<p>Laten we nu nog bovenaan meerdere regels commentaar zetten om uit te leggen wat de code doet.</p>
+<pre><code class="language-js">/*
+Deze code laat de verschillende data types zien in de console.
+Dit is handig om te weten welke data types je kan gebruiken in JavaScript.
+*/
+console.log(&quot;Hallo Wereld&quot;); // string
+console.log(42); // number
+console.log(true); // boolean
+console.log(null); // object
+console.log(undefined); // undefined
+</code></pre>
+<hr />
+<p>In de volgende les gaan we kijken naar logische operatoren en hoe je deze kan gebruiken in JavaScript.
+Ook maken we in deze les een eerste stap naar het maken van een rekenmachine.</p>
 
                     </main>
 
