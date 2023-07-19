@@ -231,7 +231,7 @@ Deze twee data types lijken op elkaar, maar zijn niet hetzelfde.</p>
 <code>undefined</code> betekent dat er geen waarde is toegewezen.</p>
 <p>Als je nu de console opent in de browser zie je de waardes van verschillende data types staan.
 Om nu de data types te kunnen zien moeten we iets toevoegen aan de code.</p>
-<p>Zet voor elke waarde de functie <code>typeof</code>:</p>
+<p>Zet voor elke waarde <code>typeof</code>:</p>
 <pre><code class="language-js">console.log(typeof &quot;Hallo Wereld&quot;);
 console.log(typeof 42);
 console.log(typeof true);
@@ -293,14 +293,129 @@ Ook maken we in deze les een eerste stap naar het maken van een rekenmachine.</p
 In de vorige les hebben we het gehad over de console, commentaar en de verschillende datatypes.
 In deze les ga ik het hebben over variabelen en de verschillende operatoren die je kan gebruiken in JavaScript.</p>
 <h2 id="variabelen"><a class="header" href="#variabelen">Variabelen</a></h2>
+<h3 id="wat-zijn-variabelen"><a class="header" href="#wat-zijn-variabelen">Wat zijn variabelen?</a></h3>
+<h3 id="variabelen-maken"><a class="header" href="#variabelen-maken">Variabelen maken</a></h3>
+<p>...</p>
+<pre><code class="language-js">var halloWereld = &quot;Hallo Wereld&quot;;
+var getal = 42;
+var isWaar = true;
+var leeg = null;
+var nietGedefinieerd;
+
+/*
+Deze code laat de verschillende data types zien in de console.
+Dit is handig om te weten welke data types je kan gebruiken in JavaScript.
+*/
+console.log(typeof halloWereld); // string
+console.log(typeof getal); // number
+console.log(typeof isWaar); // boolean
+console.log(typeof leeg); // object
+console.log(typeof nietGedefinieerd); // undefined
+</code></pre>
+<h3 id="variabelen-verwijderen"><a class="header" href="#variabelen-verwijderen">Variabelen verwijderen</a></h3>
+<p>...</p>
+<pre><code class="language-js">var halloWereld = &quot;Hallo Wereld&quot;;
+var getal = 42;
+var isWaar = true;
+var leeg = null;
+
+/*
+Deze code laat de verschillende data types zien in de console.
+Dit is handig om te weten welke data types je kan gebruiken in JavaScript.
+*/
+console.log(typeof halloWereld); // string
+console.log(typeof getal); // number
+console.log(typeof isWaar); // boolean
+console.log(typeof leeg); // object
+
+delete halloWereld;
+
+console.log(typeof halloWereld); // undefined
+</code></pre>
+<h3 id="variabelen-aanpassen"><a class="header" href="#variabelen-aanpassen">Variabelen aanpassen</a></h3>
+<p>...</p>
+<pre><code class="language-js">var halloWereld = &quot;Hallo Wereld&quot;;
+var getal = 42;
+var isWaar = true;
+var leeg = null;
+
+/*
+Deze code laat de verschillende data types zien in de console.
+Dit is handig om te weten welke data types je kan gebruiken in JavaScript.
+*/
+console.log(typeof halloWereld); // string
+console.log(typeof getal); // number
+console.log(typeof isWaar); // boolean
+console.log(typeof leeg); // object
+
+delete halloWereld;
+
+console.log(typeof halloWereld); // undefined
+
+getal = &quot;42&quot;;
+
+console.log(typeof halloWereld); // string
+</code></pre>
 <h2 id="operatoren"><a class="header" href="#operatoren">Operatoren</a></h2>
 <h3 id="wat-zijn-operatoren"><a class="header" href="#wat-zijn-operatoren">Wat zijn operatoren?</a></h3>
 <p>Operatoren zijn symbolen die je kan gebruiken om een bepaalde actie uit te voeren op een of meerdere waarden.</p>
-<h3 id="rekenkundige-operatoren"><a class="header" href="#rekenkundige-operatoren">Rekenkundige operatoren</a></h3>
-<h3 id="vergelijkende-operatoren"><a class="header" href="#vergelijkende-operatoren">Vergelijkende operatoren</a></h3>
-<h3 id="logische-operatoren"><a class="header" href="#logische-operatoren">Logische operatoren</a></h3>
 <h3 id="type-operatoren"><a class="header" href="#type-operatoren">Type operatoren</a></h3>
-
+<p>Er zijn verschillende soorten operatoren in JavaScript.
+Een soort operatoren is type operatoren.
+Type operatoren zijn operatoren die je kan gebruiken om het type van een waarde te achterhalen.</p>
+<p>Er zijn 2 type operatoren in JavaScript.
+Een hiervan hebben we al gezien in de vorige les.
+Dit is de <code>typeof</code> operator.</p>
+<p>De <code>typeof</code> operator geeft het type van een waarde terug als een string.</p>
+<p>Naast de <code>typeof</code> operator is er ook nog de <code>instanceof</code> operator.
+Deze gaan we in deze cursus niet behandelen, maar als je er meer over wilt weten kan je er <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">hier</a> meer over lezen.</p>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Omschrijving</th></tr></thead><tbody>
+<tr><td>typeof</td><td>Geeft het type van een variable</td></tr>
+<tr><td>instanceof</td><td>Geeft <code>true</code> terug als een waarde een instantie van een objecttype is</td></tr>
+</tbody></table>
+</div>
+<h3 id="vergelijkende-operatoren"><a class="header" href="#vergelijkende-operatoren">Vergelijkende operatoren</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Omschrijving</th></tr></thead><tbody>
+<tr><td>==</td><td>Gelijk aan</td></tr>
+<tr><td>===</td><td>Gelijk aan en hetzelfde type</td></tr>
+<tr><td>!=</td><td>Niet gelijk aan</td></tr>
+<tr><td>!==</td><td>Niet gelijk aan of niet hetzelfde type</td></tr>
+<tr><td>&gt;</td><td>Groter dan</td></tr>
+<tr><td>&lt;</td><td>Kleiner dan</td></tr>
+<tr><td>&gt;=</td><td>Groter dan of gelijk aan</td></tr>
+<tr><td>&lt;=</td><td>Kleiner dan of gelijk aan</td></tr>
+</tbody></table>
+</div>
+<h3 id="logische-operatoren"><a class="header" href="#logische-operatoren">Logische operatoren</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Omschrijving</th></tr></thead><tbody>
+<tr><td>&amp;&amp;</td><td>En</td></tr>
+<tr><td>||</td><td>Of</td></tr>
+<tr><td>!</td><td>Niet</td></tr>
+</tbody></table>
+</div>
+<h3 id="rekenkundige-operatoren"><a class="header" href="#rekenkundige-operatoren">Rekenkundige operatoren</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Omschrijving</th></tr></thead><tbody>
+<tr><td>+</td><td>Optellen</td></tr>
+<tr><td>-</td><td>Aftrekken</td></tr>
+<tr><td>*</td><td>Vermenigvuldig</td></tr>
+<tr><td>**</td><td>Machtsverheffen</td></tr>
+<tr><td>/</td><td>Delen</td></tr>
+<tr><td>%</td><td>Modulo</td></tr>
+<tr><td>++</td><td>Verhogen</td></tr>
+<tr><td>--</td><td>Verlagen</td></tr>
+</tbody></table>
+</div>
+<h3 id="toekenning-operatoren"><a class="header" href="#toekenning-operatoren">Toekenning operatoren</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Operator</th><th>Voorbeeld</th><th>Gelijk aan</th></tr></thead><tbody>
+<tr><td><code>=</code></td><td><code>myVariable = 5</code></td><td><code>myVariable = 5</code></td></tr>
+<tr><td><code>+=</code></td><td><code>myVariable += 5</code></td><td><code>myVariable = myVariable + 5</code></td></tr>
+<tr><td><code>-=</code></td><td><code>myVariable -= 5</code></td><td><code>myVariable = myVariable - 5</code></td></tr>
+<tr><td><code>*=</code></td><td><code>myVariable *= 5</code></td><td><code>myVariable = myVariable * 5</code></td></tr>
+<tr><td><code>/=</code></td><td><code>myVariable /= 5</code></td><td><code>myVariable = myVariable / 5</code></td></tr>
+<tr><td><code>%=</code></td><td><code>myVariable %= 5</code></td><td><code>myVariable = myVariable % 5</code></td></tr>
+<tr><td><code>**=</code></td><td><code>myVariable **= 5</code></td><td><code>myVariable = myVariable ** 5</code></td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
