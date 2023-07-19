@@ -92,7 +92,7 @@ Deze twee data types lijken op elkaar, maar zijn niet hetzelfde.
 Als je nu de console opent in de browser zie je de waardes van verschillende data types staan.
 Om nu de data types te kunnen zien moeten we iets toevoegen aan de code.
 
-Zet voor elke waarde de functie `typeof`:
+Zet voor elke waarde `typeof`:
 
 ```js
 console.log(typeof "Hallo Wereld");
