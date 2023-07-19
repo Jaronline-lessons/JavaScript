@@ -127,11 +127,11 @@ Er zijn drie soorten commentaar in JavaScript:
 Zet na elk console bericht commentaar met het datatype:
 
 ```js
-console.log("Hallo Wereld"); // string
-console.log(42); // number
-console.log(true); // boolean
-console.log(null); // object
-console.log(undefined); // undefined
+console.log(typeof "Hallo Wereld"); // string
+console.log(typeof 42); // number
+console.log(typeof true); // boolean
+console.log(typeof null); // object
+console.log(typeof undefined); // undefined
 ```
 
 Ik zal nu voordat we de console openen in de browser nog even uitleggen wat deze data types betekenen.
@@ -149,11 +149,11 @@ Laten we nu nog bovenaan meerdere regels commentaar zetten om uit te leggen wat 
 Deze code laat de verschillende data types zien in de console.
 Dit is handig om te weten welke data types je kan gebruiken in JavaScript.
 */
-console.log("Hallo Wereld"); // string
-console.log(42); // number
-console.log(true); // boolean
-console.log(null); // object
-console.log(undefined); // undefined
+console.log(typeof "Hallo Wereld"); // string
+console.log(typeof 42); // number
+console.log(typeof true); // boolean
+console.log(typeof null); // object
+console.log(typeof undefined); // undefined
 ```
 
 ---
